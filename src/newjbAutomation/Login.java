@@ -6,6 +6,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -73,9 +75,6 @@ public class Login extends jobbuzzBaseFunctions {
 	}
 	
 	
-	
-	
-	
 	@Test(enabled=false)
 	public void LIRegister()
 	{
@@ -91,13 +90,18 @@ public class Login extends jobbuzzBaseFunctions {
 		driver.findElement(By.xpath("//*[@id='body']/div/form/div[2]/ul/li[1]/input")).click();			
 	}
 	
-   @Test(enabled=false)
-   public void FBRegister()
+   @Test
+   public void FBRegister() throws InterruptedException
    {
 	   	driver.get("http://jobbuzz.timesjobs.com/");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='fixed']/div[2]/ul[1]/li[2]/a")).click();
-		driver.findElement(By.xpath("//*[@id='myModalSignup']/div/div/div[2]/div/div/div[1]/div[2]/div[2]/div[2]/div[2]/a/img")).click();
+		//driver.findElement(By.xpath("//*[@id='fixed']/div[2]/ul[1]/li[2]/a")).click();
+		driver.findElement(By.className("pageview")).click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,50);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='myModalSignup']/div/div/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div[1]/a")));
+		
+		driver.findElement(By.xpath("//*[@id='myModalSignup']/div/div/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div[1]/a")).click();
 		//driver.findElement(By.xpath("//*[@id='account-chooser-add-account']")).click();
 		driver.findElement(By.xpath("//*[@id='Email']")).sendKeys("manojtbsl3@gmail.com");
 		driver.findElement(By.xpath("//*[@id='Passwd']")).sendKeys("testtest@123");
@@ -140,7 +144,7 @@ public class Login extends jobbuzzBaseFunctions {
    }
 	
    //review posting page
-   @Test
+   @Test(enabled=false)
    public void reviewposting()
    {
 	   driver.get("http://jobbuzz.timesjobs.com/");

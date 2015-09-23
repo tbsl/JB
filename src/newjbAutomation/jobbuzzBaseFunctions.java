@@ -32,13 +32,13 @@ public class jobbuzzBaseFunctions {
 		//x =new Xls_Reader("D:\\ReportGeneration\\excel\\sanity.xls");
 		//x = new Xls_Reader(System.getProperty("user.dir")+"//src//utilitypackage//login_automation.xls");		
 		
-		System.out.println(c.getProperty("browserName"));
+		System.out.println(p.getProperty("browserName"));
 		
 		if(c.getProperty("browserName").equals("Mozilla"))
 		{
 			driver=new FirefoxDriver();
 		}
-		else if(c.getProperty("browserName").equals("Chrome"))
+		else if(p.getProperty("browserName").equals("Chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\lib\\chromedriver.exe");
 			driver=new ChromeDriver();
@@ -46,7 +46,7 @@ public class jobbuzzBaseFunctions {
 		}
 		
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		
 	}
 

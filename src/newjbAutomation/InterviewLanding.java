@@ -34,13 +34,13 @@ public class Interviewposting extends jobbuzzBaseFunctions{
 		driver.get(p.getProperty("jB_URL"));
 		driver.findElement(By.xpath("//*[@id='navbar-collapse1']/ul/li[4]/a")).click();
 		driver.findElement(By.xpath("//*[@id='Intestep1']/div[2]/a")).click();
-		driver.findElement(By.name("question")).sendKeys("what is automation");
-		driver.findElement(By.name("skillName")).sendKeys("selenium");
+		driver.findElement(By.name("question")).sendKeys("what is css?");
+		driver.findElement(By.name("skillName")).sendKeys("Java");
 		driver.findElement(By.className("addintskill")).click();
 		driver.findElement(By.xpath("//*[@id='questionInfo']/div/div[6]/div[2]/a[1]")).click();
 		
-		driver.findElement(By.name("company")).sendKeys("Hcl Technologies Ltd");
-		driver.findElement(By.name("role")).sendKeys("System Engineer");
+		driver.findElement(By.name("company")).sendKeys("Infosys Technologies Ltd");
+		driver.findElement(By.name("role")).sendKeys("Database Administrator");
 		driver.findElement(By.id("submitinterview")).click();
 		
 		//String popup = driver.getWindowHandle();
@@ -52,7 +52,7 @@ public class Interviewposting extends jobbuzzBaseFunctions{
 		
 		driver.findElement(By.xpath("//*[@id='postcard']/div[2]/div[2]/div[1]/div[3]/div/div/div/div/div/a")).click();
 		driver.findElement(By.name("jobTitle")).sendKeys("product manager");
-		driver.findElement(By.name("interviewLocation")).sendKeys("jaipur");
+		driver.findElement(By.name("interviewLocation")).sendKeys("Mumbai");
 		driver.findElement(By.linkText("TELL US HOW DIFFICULT IT WAS?")).click();
 		driver.findElement(By.linkText("WHEN WAS IT STARTED?")).click();
 		driver.findElement(By.linkText("TELL US WHAT IT INVOLVED?")).click();

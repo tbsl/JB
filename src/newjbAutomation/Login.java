@@ -1,6 +1,7 @@
 package newjbAutomation;
 
 import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -78,6 +79,7 @@ public class Login extends jobbuzzBaseFunctions {
 	@Test(enabled=false)
 	public void LIRegister()
 	{
+
 		driver.get("http://jobbuzz.timesjobs.com/");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//*[@id='fixed']/div[2]/ul[1]/li[2]/a")).click();

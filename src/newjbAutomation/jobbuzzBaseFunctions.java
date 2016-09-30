@@ -11,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import utilitypackage.Xls_Reader;
 
 public class jobbuzzBaseFunctions {
 
@@ -27,16 +26,16 @@ public class jobbuzzBaseFunctions {
 		p=new Properties();
 		p.load(Orfile);
 		
-		FileInputStream  configfile=new FileInputStream(System.getProperty("user.dir")+"\\src\\CONFIG.properties");
+		//FileInputStream  configfile=new FileInputStream(System.getProperty("user.dir")+"\\src\\CONFIG.properties");
 		c=new Properties();
-		c.load(configfile);
+		//c.load(configfile);
 		
 		//x =new Xls_Reader("D:\\ReportGeneration\\excel\\sanity.xls");
 		//x = new Xls_Reader(System.getProperty("user.dir")+"//src//utilitypackage//login_automation.xls");		
 		
-		System.out.println(p.getProperty("browserName"));
+	    System.out.println(p.getProperty("browserName"));
 		
-		if(c.getProperty("browserName").equals("Mozilla"))
+		/*if(c.getProperty("browserName").equals("Mozilla"))
 		{
 			driver=new FirefoxDriver();
 		}
@@ -45,6 +44,15 @@ public class jobbuzzBaseFunctions {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\lib\\chromedriver.exe");
 			driver=new ChromeDriver();
 			
+		}*/
+		
+		if(true)
+		{
+			System.out.println("Launching browser");
+			driver=new FirefoxDriver();
+			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\lib\\chromedriver.exe");
+			//driver=new ChromeDriver();
+	
 		}
 		
 		driver.manage().window().maximize();

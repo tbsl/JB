@@ -1,7 +1,5 @@
-/**
- * 
- */
-package z_Jobbuzz_Automation_script;
+package newjbAutomation;
+
 
 import java.util.concurrent.TimeUnit;
 

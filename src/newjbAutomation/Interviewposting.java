@@ -30,12 +30,16 @@ public class Interviewposting extends jobbuzzBaseFunctions{
 	}
 	
 	@Test
-	public void interviewpost()
+	public void interviewpost() throws InterruptedException
 	{
 		
 		driver.get(p.getProperty("jB_URL"));
-		driver.findElement(By.xpath("//*[@id='navbar-collapse1']/ul/li[4]/a")).click();
-		driver.findElement(By.xpath("//*[@id='Intestep1']/div[2]/a")).click();
+		Thread.sleep(2000);
+		System.out.println("Browser launched");
+		driver.findElement(By.xpath(".//*[@id='navbar-collapse1']/ul/li[5]/a")).click();
+		
+		
+	    driver.findElement(By.xpath("//*[@id='Intestep1']/div[2]/a")).click();
 		driver.findElement(By.name("question")).sendKeys("what is automation");
 		driver.findElement(By.name("skillName")).sendKeys("selenium");
 		driver.findElement(By.className("addintskill")).click();

@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class Interviewposting extends jobbuzzBaseFunctions{
+public class InterviewLanding extends jobbuzzBaseFunctions{
 	
 	@BeforeMethod
 	public void setup()
@@ -32,7 +32,7 @@ public class Interviewposting extends jobbuzzBaseFunctions{
 	{
 		
 		driver.get(p.getProperty("jB_URL"));
-		driver.findElement(By.xpath("//*[@id='navbar-collapse1']/ul/li[4]/a")).click();
+		driver.findElement(By.xpath("//*[@id='navbar-collapse1']/ul/li[5]/a")).click();
 		driver.findElement(By.xpath("//*[@id='Intestep1']/div[2]/a")).click();
 		driver.findElement(By.name("question")).sendKeys("what is css?");
 		driver.findElement(By.name("skillName")).sendKeys("Java");

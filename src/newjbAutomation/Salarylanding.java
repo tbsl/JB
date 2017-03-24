@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class GplusLogin extends jobbuzzBaseFunctions {
+public class Salarylanding extends jobbuzzBaseFunctions {
 	
 
 	@BeforeMethod
@@ -27,20 +27,29 @@ public class GplusLogin extends jobbuzzBaseFunctions {
 	}
 	
 	@Test
-	   public void GoogleplusLogin()
+   public void GoogleplusLogin() throws InterruptedException
 	   {
 		   driver.get(p.getProperty("jB_URL"));
 		   driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		   driver.findElement(By.className(p.getProperty("login"))).click();
 		   driver.findElement(By.xpath(p.getProperty("Gplusbutton"))).click();
-		 
+		   
 		   driver.findElement(By.xpath(p.getProperty("GplusEmail"))).sendKeys("manojtbsl3@gmail.com");
 		   driver.findElement(By.xpath(p.getProperty("GplusNextButton"))).click();
 		   driver.findElement(By.xpath(p.getProperty("Gpluspassword"))).sendKeys("testtest@123");
 		   driver.findElement(By.xpath(p.getProperty("GplusSubmit"))).click();
-		   System.out.println("Login Successful through GooglePlus");  
+		   Thread.sleep(1000);
 		   
-	   }
+		  
+
+		   
+		   driver.findElement(By.xpath("//*[@id='navbar-collapse1']/ul/li[3]/a")).click();
+		   driver.findElement(By.xpath("//*[@id='jobsSalaryTextH']")).click();
+		   driver.findElement(By.xpath("//*[@id='jobsSalaryTextH']")).sendKeys("icici bank ltd");
+		   driver.findElement(By.xpath("//*[@id='salaryhomepage']/div[1]/div/div/div[1]/div/div")).click();
+	   
+		     
+		 }
 	
 	
 	@AfterMethod(enabled=false)
@@ -48,6 +57,5 @@ public class GplusLogin extends jobbuzzBaseFunctions {
 	{
 		driver.close();
 	}
-	
 
 }

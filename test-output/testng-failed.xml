@@ -3,17 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="newjbAutomation.companynavigation"/>
+      <class name="newjbAutomation.Salarylanding"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="newjbAutomation.companynavigation">
+      <class name="newjbAutomation.Salarylanding">
         <methods>
-          <include name="GoogleplusLogin4"/>
+          <include name="GoogleplusLogin"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- newjbAutomation.companynavigation -->
+      </class> <!-- newjbAutomation.Salarylanding -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

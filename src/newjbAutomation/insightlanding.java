@@ -31,7 +31,7 @@ public class insightlanding extends jobbuzzBaseFunctions {
 	   {
 	   driver.get(p.getProperty("jB_URL"));
 	   driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-   driver.findElement(By.className(p.getProperty("login"))).click();
+       driver.findElement(By.className(p.getProperty("login"))).click();
 	   driver.findElement(By.xpath(p.getProperty("Gplusbutton"))).click();
    
    driver.findElement(By.xpath(p.getProperty("GplusEmail"))).sendKeys("manojtbsl3@gmail.com");
